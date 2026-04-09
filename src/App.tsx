@@ -60,6 +60,7 @@ export default function App() {
 
     // Initial confetti burst
     const fireConfetti = () => {
+<<<<<<< HEAD
       if (typeof window === 'undefined') return;
       
       try {
@@ -70,6 +71,10 @@ export default function App() {
         });
         
         myConfetti({
+=======
+      try {
+        confetti({
+>>>>>>> 8d862baa3fd80c69915c3a47ab764b18c3b851bc
           particleCount: 150,
           spread: 70,
           origin: { y: 0.6 },
@@ -81,6 +86,7 @@ export default function App() {
       }
     };
 
+<<<<<<< HEAD
     // Use requestAnimationFrame to ensure we are in a valid paint cycle
     const confettiTimer = setTimeout(() => {
       requestAnimationFrame(fireConfetti);
@@ -89,6 +95,10 @@ export default function App() {
     const confettiTimer2 = setTimeout(() => {
       requestAnimationFrame(fireConfetti);
     }, 2500);
+=======
+    const confettiTimer = setTimeout(fireConfetti, 1500);
+    const confettiTimer2 = setTimeout(fireConfetti, 2500);
+>>>>>>> 8d862baa3fd80c69915c3a47ab764b18c3b851bc
 
     return () => {
       clearInterval(timer);
